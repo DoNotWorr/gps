@@ -6,7 +6,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.worr.gps.model.Unit;
+import org.worr.gps.model.Gps;
 import org.worr.gps.services.UnitService;
 
 import static org.mockito.BDDMockito.given;
@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(UnitController.class)
-public class UnitControllerTest {
+public class GpsControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -31,7 +31,7 @@ public class UnitControllerTest {
 
         //Arrange
         given(unitService.getUnitById(expectedId))
-                .willReturn(new Unit(expectedId, expectedDescription));
+                .willReturn(new Gps(expectedId, expectedDescription));
 
         //Act, assert
         mockMvc.perform(MockMvcRequestBuilders.get(url))

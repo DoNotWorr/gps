@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.worr.gps.model.Unit;
+import org.worr.gps.model.Gps;
 import org.worr.gps.services.UnitService;
 
 @RestController
@@ -19,7 +19,7 @@ public class UnitController {
     }
 
     @GetMapping("/{id}")
-    private Unit getUnit(@PathVariable Long id) {
+    private Gps getUnit(@PathVariable Long id) {
         return unitService.getUnitById(id);
     }
 }

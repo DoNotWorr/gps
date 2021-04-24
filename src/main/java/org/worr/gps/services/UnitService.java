@@ -1,11 +1,11 @@
 package org.worr.gps.services;
 
 import org.springframework.stereotype.Service;
-import org.worr.gps.model.Unit;
+import org.worr.gps.model.Gps;
 
 @Service
 public class UnitService {
-    public Unit getUnitById(Long id) {
+    public Gps getUnitById(Long id) {
         return null;
     }
 }

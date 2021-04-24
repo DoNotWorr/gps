@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.worr.gps.model.Unit;
+import org.worr.gps.model.Gps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -24,7 +24,7 @@ public class IntegrationTest {
         String expectedDescription = "Attached to red tractor ABC-123";
 
         //Act
-        ResponseEntity<Unit> response = restTemplate.getForEntity("/units/1", Unit.class);
+        ResponseEntity<Gps> response = restTemplate.getForEntity("/units/1", Gps.class);
 
         //Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

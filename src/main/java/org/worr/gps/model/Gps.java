@@ -1,10 +1,10 @@
 package org.worr.gps.model;
 
-public class Unit {
+public class Gps {
     private Long id;
     private String description;
 
-    public Unit(Long id, String description) {
+    public Gps(Long id, String description) {
         this.id = id;
         this.description = description;
     }
